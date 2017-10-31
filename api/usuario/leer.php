@@ -6,8 +6,8 @@
 	header("Conten-Type: application/json; charset=UTF-8");
 	
 	
-	include_once'db.php';
-	include_once'usuarios.php';
+	include_once'../config/db.php';
+	include_once'../objects/usuarios.php';
 	
 	$database = new Database();
 	$db = $database->getConnection();

@@ -412,3 +412,11 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home4/agencim4/public_html/adminCondominio/apiCondor/php/config/product/leer.php on line 13
+[31-Oct-2017 16:25:09 UTC] PHP Warning:  include_once(config/db.php): failed to open stream: No such file or directory in /home4/agencim4/public_html/adminCondominio/apiCondor/api/usuario/leer.php on line 9
+[31-Oct-2017 16:25:09 UTC] PHP Warning:  include_once(): Failed opening 'config/db.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home4/agencim4/public_html/adminCondominio/apiCondor/api/usuario/leer.php on line 9
+[31-Oct-2017 16:25:09 UTC] PHP Warning:  include_once(objects/usuarios.php): failed to open stream: No such file or directory in /home4/agencim4/public_html/adminCondominio/apiCondor/api/usuario/leer.php on line 10
+[31-Oct-2017 16:25:09 UTC] PHP Warning:  include_once(): Failed opening 'objects/usuarios.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home4/agencim4/public_html/adminCondominio/apiCondor/api/usuario/leer.php on line 10
+[31-Oct-2017 16:25:09 UTC] PHP Fatal error:  Uncaught Error: Class 'Database' not found in /home4/agencim4/public_html/adminCondominio/apiCondor/api/usuario/leer.php:12
+Stack trace:
+#0 {main}
+  thrown in /home4/agencim4/public_html/adminCondominio/apiCondor/api/usuario/leer.php on line 12
