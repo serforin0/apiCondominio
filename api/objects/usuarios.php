@@ -61,4 +61,31 @@
 			
 			
 		}
+		
+		
+		function leerUno(){
+			
+			$query = "SELECT
+						 id, nombre, apellido, cedula, foto, edificio, numero_apartamento, arendamiento  
+					FROM Usuario 
+					WHERE 
+						id = ? 
+					LIMIT 
+						0,1";
+			
+			$stmt = $this->conn->prepare( $query );
+			
+			$stmt->bindParam(1, $this->id);
+			
+			$row = $stmt->fetch(PDO::FETCH_ASSOC);
+			
+			$this->nombre = $row['nombre'];
+			$this->apellido = $row['apellido'];
+			$this->cedula = $row['cedula'];
+			$this->foto = $row['foto'];
+			$this->edificio = $row['edificio'];
+			$this->numero_apartamento = $row['numero_apartamento'];
+			$this->arentamiento = $row['arentamiento'];
+			
+		}
 	}
