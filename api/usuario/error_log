@@ -1,0 +1,1 @@
+[01-Nov-2017 15:32:02 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home4/agencim4/public_html/adminCondominio/apiCondor/api/objects/usuarios.php on line 74

@@ -1,5 +1,4 @@
 <?php
-
 	header("Access-Control-Allow-Origin: *");
 	header("Access-Control-Allow-Headers: access");
 	header("Access-Control-Allow-Methods: GET");
@@ -20,10 +19,7 @@
 	
 	$usuario->leerUno();
 	
-	
-	//nombre=nombre, apellido=apellido, cedula=cedula, foto=foto, edificio=edificio, numero_apartamento=numero_apartamento, arendamiento=arendamiento";
 	//creando array
-
 	$usuario_arr = array(
 		"id" => $usuario->id,
 		"nombre" => $usuario->nombre,
