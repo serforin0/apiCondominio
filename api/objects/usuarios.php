@@ -142,4 +142,47 @@
 			}
 			return false;
 		}
+		
+		function search($keywords){
+			$query = "SELECT id, nombre, apellido, cedula, foto, edificio FROM ".$this->table_name. " WHERE nombre LIKE ? 						OR apellido LIKE ? OR cedula LIKE ? ORDER BY nombre DESC";
+			 		  
+			$stmt = $this->conn->prepare($query);
+			
+			$keywords=htmlspecialchars(strip_tags($keywords));
+			$keywords = "%{$keywords}%";
+			
+			$stmt->bindParam(1, $keywords);
+			$stmt->bindParam(2, $keywords);
+			$stmt->bindParam(3, $keywords);
+			
+			$stmt->execute();
+			
+			return $stmt;
+			
+		}
+		
+		public function readPaging($from_record_num, $records_per_page){
+				$query = "SELECT
+						 id, nombre, apellido, cedula, foto, edificio, numero_apartamento, arendamiento  
+					FROM ".  $this->table_name. " ORDER BY nombre DESC LIMIT ?, ?";
+					
+					$stmt = $this->conn->prepare($query);
+					
+					$stmt->bindParam(1, $from_record_num, PDO::PARAM_INT);
+					$stmt->bindParam(2, $records_per_page, PDO::PARAM_INT);
+					
+					$stmt->execute();
+					
+					return $stmt;
+		}
+		
+		public function count(){
+			$query = "SELECT COUNT(*) as total_rows FROM ". $this->table_name. "";
+			
+			$stmt = $this->conn->prepare($query);
+			$stmt->execute();
+			$row = $stmt->fetch(PDO::FETCH_ASSOC);
+			
+			return $row['total_rows'];
+		}
 	}
