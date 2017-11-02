@@ -3,7 +3,7 @@
 	ini_set('displa_errors', 1);
 	error_reporting(E_ALL);
 	
-	$home_url="http://agenciadeaduanasmmyasociados.com/adminCondominio/apiCondor/api/";
+	$home_url="";
 	
 	$page = isset($_GET['page']) ? $_GET['page'] : 1;
 	
