@@ -33,7 +33,7 @@
 			$query = "INSERT INTO
 						" . $this->table_name ."
 					SET
-					nombre=nombre, apellido=apellido, cedula=cedula, foto=foto, edificio=edificio, numero_apartamento=numero_apartamento, arendamiento=arendamiento";
+					nombre=:nombre, apellido=:apellido, cedula=:cedula, foto=:foto, edificio=:edificio, numero_apartamento=:numero_apartamento, arendamiento=:arendamiento";
 					
 			$stmt = $this->conn->prepare($query);
 			

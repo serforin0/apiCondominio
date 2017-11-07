@@ -3,9 +3,9 @@ class Database{
  
     // specify your own database credentials
     private $host = "localhost";
-    private $db_name = "";
-    private $username = "";
-    private $password = "";
+    private $db_name = "agencim4_apiCondo";
+    private $username = "agencim4_yordy";
+    private $password = "yordyaquiles07";
     public $conn;
  
     // get the database connection
